@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<project name="TestJava" default="jar" basedir="">
+	<target name="compile">
+		<javac srcdir="src" destdir="build/classes/" />
+	</target>
+    <target name="jar" depends="compile">
+        <jar destfile="testjava.jar" basedir="build/classes/">
+            <manifest>
+                <attribute name="Main-class" value="Test" />
+            </manifest>
+        </jar>
+    </target>
+</project>
